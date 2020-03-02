@@ -35,8 +35,6 @@ export const Item = (props) => {
 		});
 
 		setCart(filtered);
-
-		//setCart(cart.filter(item=> item.id !== props.id)) remove all items
 	};
 
 	return (

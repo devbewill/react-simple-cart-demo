@@ -78,18 +78,42 @@ button {
 	.cartDetail {
 		padding-top: 2em;
 		font-size: 1.2em;
-		p {
-			position: relative;
-			text-transform: uppercase;
-			line-height: 2.5em;
-			border-bottom: 1px solid #eaeaea;
 
-			span {
-				position: absolute;
-				right: 1em;
-				font-size: 0.8em;
+		.cartSingleItem {
+			display: flex;
+			align-items: center;
+			border-bottom: 1px solid #eaeaea;
+			padding-top: 1em;
+			padding-bottom: 0.5em;
+
+			p {
+				font-size: 0.9em;
+				flex-grow: 1;
+				position: relative;
+				display: inline-block;
+				text-transform: uppercase;
+			}
+
+			.price {
+				padding-left: 2em;
+				font-weight: bold;
 				&:after {
 					content: '€';
+				}
+			}
+
+			.action {
+				text-align: right;
+				flex-grow: 2;
+				cursor: pointer;
+				.remove {
+					transition: all 0.2s ease-in;
+					font-size: 1em;
+					width: 2em;
+
+					&:hover {
+						color: red;
+					}
 				}
 			}
 		}
