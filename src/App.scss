@@ -1,0 +1,38 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+h6 {
+	margin: 0;
+}
+
+.detail {
+	position: fixed;
+	top: 0;
+	right: 1em;
+	height: 100vh;
+}
+
+.itemList {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 2em;
+	max-width: 80vw;
+	margin: 5em auto;
+
+	.item {
+	}
+}
+
+.itemInfos {
+	display: flex;
+	justify-content: space-between;
+}
