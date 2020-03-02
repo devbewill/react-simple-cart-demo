@@ -6,6 +6,10 @@ export const Cart = () => {
 	const [ cart, setCart ] = useContext(CartContext);
 	const totalPrice = cart.reduce((acc, curr) => acc + curr.price, 0);
 
+	const emptyCart = () => {
+		setCart([]);
+	};
+
 	return (
 		<div className="cart">
 			<div className="cartHeader">
@@ -20,6 +24,9 @@ export const Cart = () => {
 					</p>
 				))}
 			</div>
+			<button className="emptyCart" onClick={() => emptyCart(cart)}>
+				remove all
+			</button>
 			<button className="checkout"> Pay </button>
 		</div>
 	);

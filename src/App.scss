@@ -95,6 +95,11 @@ button {
 		}
 	}
 
+	.emptyCart {
+		position: absolute;
+		top: 85vh;
+		color: #999;
+	}
 	.checkout {
 		width: 20vw;
 		background: #16b916;
@@ -143,7 +148,7 @@ button {
 		position: absolute;
 		top: -1em;
 		right: -1em;
-		background: #222;
+		background: #444;
 		color: #fff;
 		width: 3em;
 		height: 3em;
