@@ -36,9 +36,9 @@ export const Cart = (props) => {
 			<div className="cartDetail">
 				{cart.map((item, i) => (
 					<div key={i} className="cartSingleItem">
+						<img src={item.img} alt={item.name} />
 						<p>{item.name}</p>
-						<span className="price">{item.price}</span>
-						{/* <span className="remove" onClick={() => removeToCart(item.id)} /> */}
+						<p className="price">{item.price}</p>
 						<div className="action">
 							<FontAwesomeIcon className="remove" icon={faTrash} onClick={() => removeToCart(item.id)} />
 						</div>

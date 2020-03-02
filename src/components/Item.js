@@ -15,7 +15,7 @@ export const Item = (props) => {
 	);
 
 	const addToCart = () => {
-		const item = { name: props.name, price: props.price, id: props.id };
+		const item = { name: props.name, price: props.price, id: props.id, img: props.img };
 		setCart((currentState) => [ ...currentState, item ]);
 	};
 
