@@ -46,9 +46,9 @@ export const Item = (props) => {
 			<button className="add" onClick={addToCart}>
 				Add to cart
 			</button>
-			<button className="remove" onClick={() => removeToCart(props)}>
+			{/* <button className="remove" onClick={() => removeToCart(props)}>
 				Remove
-			</button>
+			</button> */}
 		</div>
 	);
 };

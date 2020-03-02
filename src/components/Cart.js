@@ -26,6 +26,10 @@ export const Cart = (props) => {
 		setCart(filtered);
 	};
 
+	const sendToPayApp = (amount) => {
+		alert(amount);
+	};
+
 	return (
 		<div className="cart">
 			<div className="cartHeader">
@@ -48,7 +52,10 @@ export const Cart = (props) => {
 			<button className="emptyCart" onClick={() => setCart([])}>
 				remove all
 			</button>
-			<button className="checkout"> Pay </button>
+			<button className="checkout" onClick={() => sendToPayApp(totalPrice.toFixed(2))}>
+				{' '}
+				Pay{' '}
+			</button>
 		</div>
 	);
 };
