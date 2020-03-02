@@ -79,9 +79,19 @@ button {
 		padding-top: 2em;
 		font-size: 1.2em;
 		p {
+			position: relative;
 			text-transform: uppercase;
 			line-height: 2.5em;
 			border-bottom: 1px solid #eaeaea;
+
+			span {
+				position: absolute;
+				right: 1em;
+				font-size: 0.8em;
+				&:after {
+					content: '€';
+				}
+			}
 		}
 	}
 

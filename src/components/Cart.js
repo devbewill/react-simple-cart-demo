@@ -13,7 +13,13 @@ export const Cart = () => {
 				<span className="cartCounter"> {cart.length}</span>
 			</div>
 
-			<div className="cartDetail">{cart.map((item, i) => <p key={i}> {item.name}</p>)}</div>
+			<div className="cartDetail">
+				{cart.map((item, i) => (
+					<p key={i}>
+						{item.name} <span>{item.price}</span>
+					</p>
+				))}
+			</div>
 			<button className="checkout"> Pay </button>
 		</div>
 	);
