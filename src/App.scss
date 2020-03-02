@@ -43,7 +43,7 @@ button {
 .cart {
 	background: #fff;
 	position: relative;
-	padding: 1em;
+	padding: 1em 0;
 	border-left: 1px solid #eaeaea;
 	height: 100vh;
 	overflow-y: scroll;
@@ -81,8 +81,10 @@ button {
 	}
 
 	.cartDetail {
-		padding-top: 2em;
+		padding: 2em 1em 0 1em;
 		font-size: 1.2em;
+		max-height: 70vh;
+		overflow: auto;
 
 		.cartSingleItem {
 			display: flex;
