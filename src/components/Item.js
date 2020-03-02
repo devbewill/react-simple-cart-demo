@@ -43,7 +43,7 @@ export const Item = (props) => {
 		<div className="itemInfos">
 			<img src={props.img} alt="" />
 			<h2 className="itemName">{props.name}</h2>
-			<span className="itemCounter"> x{counter}</span>
+			{counter != 0 && <span className="itemCounter"> x{counter}</span>}
 			<h4 className="itemPrice">{props.price}</h4>
 			<button className="add" onClick={addToCart}>
 				Add to cart
