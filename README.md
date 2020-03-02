@@ -3,6 +3,7 @@
 Simple cart to understand some react logic to develop a shopping cart.
 It's only POC for a demo but i hope can help someone ;)
 
+
 ![screen](./screen.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
