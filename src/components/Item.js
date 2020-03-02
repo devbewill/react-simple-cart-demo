@@ -41,12 +41,16 @@ export const Item = (props) => {
 
 	return (
 		<div className="itemInfos">
-			<h2>
-				{props.name} x {counter}
-			</h2>
-			<h4>{props.price}</h4>
-			<button onClick={addToCart}>Add to cart</button>
-			<button onClick={() => removeToCart(props)}>Remove</button>
+			<img src={props.img} alt="" />
+			<h2 className="itemName">{props.name}</h2>
+			<span className="itemCounter"> x{counter}</span>
+			<h4 className="itemPrice">{props.price}</h4>
+			<button className="add" onClick={addToCart}>
+				Add to cart
+			</button>
+			<button className="remove" onClick={() => removeToCart(props)}>
+				Remove
+			</button>
 		</div>
 	);
 };

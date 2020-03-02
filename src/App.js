@@ -3,14 +3,15 @@ import { render } from 'react-dom';
 import { ItemList } from './components/ItemList';
 import { Cart } from './components/Cart';
 import { CartProvider } from './components/CartContext';
+
 import './App.scss';
 
 function App() {
 	return (
 		<CartProvider>
-			<div>
-				<Cart />
+			<div className="container">
 				<ItemList />
+				<Cart />
 			</div>
 		</CartProvider>
 	);

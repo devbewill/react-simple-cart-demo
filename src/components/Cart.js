@@ -7,18 +7,14 @@ export const Cart = () => {
 	const totalPrice = cart.reduce((acc, curr) => acc + curr.price, 0);
 
 	return (
-		<div>
-			<span>cart counter : {cart.length}</span>
-			<br />
-			<span>total price : {totalPrice}</span>
-
-			<div className="detail">
-				{cart.map((item, i) => (
-					<h6 key={i}>
-						{item.name} - {item.price}
-					</h6>
-				))}
+		<div className="cart">
+			<div className="cartHeader">
+				<p>{totalPrice.toFixed(2)}</p>
+				<span className="cartCounter"> {cart.length}</span>
 			</div>
+
+			<div className="cartDetail">{cart.map((item, i) => <p key={i}> {item.name}</p>)}</div>
+			<button className="checkout"> Pay </button>
 		</div>
 	);
 };
