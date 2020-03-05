@@ -33,8 +33,11 @@ export const Cart = (props) => {
 
 	return (
 		<React.Fragment>
+			<div className={!cartVisibility ? 'overlay visible' : 'overlay'} />
 			<div className="cartHeader" onClick={() => setCartVisibility(!cartVisibility)}>
-				<p>{totalPrice.toFixed(2)}</p>
+				<p>
+					Amount: <span>{totalPrice.toFixed(2)}</span>
+				</p>
 				<span className="cartCounter"> {cart.length}</span>
 			</div>
 			<div className={!cartVisibility ? 'cart visible' : 'cart'}>
