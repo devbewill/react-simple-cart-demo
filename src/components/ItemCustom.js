@@ -19,7 +19,6 @@ export const ItemCustom = (props) => {
 
 	const addToCart = () => {
 		const item = { name: customName, price: parseInt(customPrice), id: '', img: newProduct };
-		console.log(item);
 		setCart((currentState) => [ ...currentState, item ]);
 		setCustomPrice('0€');
 		setCustomName('New Item');
@@ -28,7 +27,7 @@ export const ItemCustom = (props) => {
 	return (
 		<div className="item custom">
 			<div className="itemInfos">
-				<span className="newProduct" />
+				<span className="newProduct" onClick={addToCart} />
 
 				<form>
 					<div className="group">
@@ -68,9 +67,9 @@ export const ItemCustom = (props) => {
 					</div>
 				</form>
 				{counter != 0 && <span className="itemCounter"> x{counter}</span>}
-				<button className="add" onClick={addToCart}>
-					Add to cart
-				</button>
+				{/* <button className="add" onClick={addToCart}>
+					Add
+				</button> */}
 				{/* <button className="remove" onClick={() => removeToCart(props)}>
 				Remove
 			</button> */}

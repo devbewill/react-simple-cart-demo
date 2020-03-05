@@ -1,5 +1,6 @@
 {
   "name": "simple-commerce",
+  "homepage": "http://steperelli.net/react-shopping",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

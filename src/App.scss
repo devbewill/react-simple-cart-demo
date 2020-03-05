@@ -38,63 +38,76 @@ button {
 }
 
 .container {
-	display: flex;
-}
-.cart {
-	background: #fff;
 	position: relative;
-	padding: 1em 0;
-	border-left: 1px solid #eaeaea;
-	height: 100vh;
-	overflow-y: scroll;
-	min-width: 20vw;
+}
 
-	.cartHeader {
-		height: 80px;
-		background: #fff url('https://img.icons8.com/ios/100/000000/shopping-bag.png') no-repeat 90% 1em;
-		background-size: 40px;
-		padding: 0 1em;
-		border-bottom: 1px solid #eaeaea;
-		p {
-			color: #333;
-			line-height: 80px;
-			font-size: 2em;
-			&:after {
-				content: '€';
-			}
+.cartHeader {
+	cursor: pointer;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	z-index: 999;
+	height: 50px;
+	background: url('https://img.icons8.com/ios/100/000000/shopping-bag.png') no-repeat 99% 10px;
+	background-size: 30px;
+	padding: 0 1em;
+
+	p {
+		text-align: center;
+		color: #333;
+		line-height: 50px;
+		font-size: 1.5em;
+		font-weight: bold;
+		&:after {
+			content: '€';
 		}
 	}
 
 	.cartCounter {
 		position: absolute;
-		top: 2em;
-		right: 15px;
+		top: 5px;
+		right: 6px;
 		background: deeppink;
 		color: #fff;
-		width: 1.5em;
-		height: 1.5em;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
 		border-radius: 50%;
 		text-align: center;
-		line-height: 1.5em;
-		font-size: 1em;
+		font-size: 0.9em;
 		font-weight: bold;
 	}
+}
+.cart {
+	position: fixed;
+	padding: 0;
+	top: 0;
+	bottom: 0;
+	left: auto;
+	right: -230px;
+	z-index: 2;
+	font-size: 1.2em;
+	background: #fff;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border: 1px solid #eaeaea;
+	overflow-y: scroll;
+	min-width: 20vw;
+	transition: all 0.3s ease-in;
+	margin-top: 3em;
+	box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+		0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+		0 100px 80px rgba(0, 0, 0, 0.12);
 
 	.cartDetail {
-		padding: 2em 1em 0 1em;
-		font-size: 1.2em;
-		max-height: 70vh;
-		overflow: auto;
-
 		.cartSingleItem {
 			display: flex;
 			align-items: baseline;
 			border-bottom: 1px solid #eaeaea;
-			padding-top: 1em;
-			padding-bottom: 0.5em;
+			padding: 0.5em;
 
 			img {
-				max-width: 30px;
+				max-width: 35px;
 				margin-right: 0.5em;
 			}
 
@@ -138,22 +151,34 @@ button {
 		color: #999;
 	}
 	.checkout {
-		width: 20vw;
+		border-bottom-left-radius: 20px;
+		width: 55px;
+		height: 55px;
+		line-height: 55px;
+		font-size: 1.5em;
+		font-weight: 300;
 		background: #16b916;
+		position: fixed;
+		right: 0;
+		left: auto;
+	}
+
+	&.visible {
+		right: 0;
 	}
 }
 
 .itemList {
+	width: 100vw;
 	display: flex;
-	justify-content: flex-start;
 	flex-wrap: wrap;
-	padding: 1em;
+	padding: 3em 1em;
 	background: #fafafa;
-	height: 100vh;
 
 	.item {
+		cursor: pointer;
 		position: relative;
-		padding: 2em 3em 4em 3em;
+		padding: 1em 3em;
 		margin: 1em;
 		background: #fff;
 		border-radius: 10px;
@@ -161,12 +186,16 @@ button {
 			0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
 			0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 
-		.add {
-			bottom: 0;
+		transition: all ease 0.3s;
+
+		&:hover {
+			box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.014), 0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+				0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.062),
+				0 41.8px 33.4px rgba(0, 0, 0, 0.026), 0 100px 80px rgba(0, 0, 0, 0.02);
 		}
 
-		&.custom {
-			padding: 2em 2em 4em 2em;
+		.add {
+			bottom: 0;
 		}
 	}
 }
@@ -201,15 +230,15 @@ button {
 
 	.itemCounter {
 		position: absolute;
-		top: -1em;
-		right: -1em;
-		background: #444;
+		top: 0;
+		right: -0.5em;
+		background: deeppink;
 		color: #fff;
-		width: 3em;
-		height: 3em;
+		width: 2em;
+		height: 2em;
 		border-radius: 50%;
 		text-align: center;
-		line-height: 3em;
+		line-height: 2em;
 		font-size: 1.5em;
 		font-weight: bold;
 	}
@@ -232,12 +261,13 @@ button {
 .group {
 	position: relative;
 	margin: 0;
+	width: 130px;
 }
 input {
 	font-size: 18px;
 	padding: 0;
 	display: block;
-	width: 170px;
+	width: 100%;
 	border: none;
 	border-bottom: 1px solid #757575;
 }
@@ -269,7 +299,7 @@ input:valid ~ label {
 .bar {
 	position: relative;
 	display: block;
-	width: 170px;
+	width: 100%;
 }
 .bar:before,
 .bar:after {
@@ -298,7 +328,7 @@ input:focus ~ .bar:after {
 .highlight {
 	position: absolute;
 	height: 60%;
-	width: 170px;
+	width: 100%;
 	top: 25%;
 	left: 0;
 	pointer-events: none;
@@ -319,5 +349,67 @@ input:focus ~ .highlight {
 	to {
 		width: 0;
 		background: transparent;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.cart {
+		position: fixed;
+		width: 80vw;
+		z-index: 999;
+		right: -65vw;
+		min-width: 0;
+		transition: all 0.4s ease-in;
+	}
+
+	.itemList {
+		.item {
+			width: 78vw;
+			padding: 1em 0;
+			margin: 0.3em 0;
+			height: auto;
+
+			.itemInfos {
+				flex-direction: row;
+				justify-content: space-around;
+
+				.newProduct {
+					margin: 0;
+				}
+
+				.itemCounter {
+					top: -0.2em;
+					right: -0.2em;
+					width: 1.8em;
+					height: 1.8em;
+					line-height: 1.8em;
+					font-size: 1.2em;
+				}
+
+				form {
+					display: flex;
+
+					.group {
+						display: flex;
+						margin: 0 5px;
+						min-width: 100px;
+						width: 100px;
+						input {
+							padding: 5px 0;
+						}
+
+						.bar {
+							width: auto;
+						}
+					}
+				}
+			}
+
+			.add {
+				position: relative;
+				width: auto;
+				height: auto;
+			}
+		}
 	}
 }
