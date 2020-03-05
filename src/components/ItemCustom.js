@@ -7,7 +7,7 @@ export const ItemCustom = (props) => {
 	const [ cart, setCart ] = useContext(CartContext);
 	const [ counter, setCounter ] = useState(qty);
 	const [ customPrice, setCustomPrice ] = useState('0€');
-	const [ customName, setCustomName ] = useState('New Item');
+	const [ customName, setCustomName ] = useState('out of menu');
 
 	useEffect(
 		() => {

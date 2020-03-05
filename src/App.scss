@@ -89,7 +89,6 @@ button {
 	font-size: 1.2em;
 	background: #fff;
 	border-top-left-radius: 20px;
-	border-bottom-left-radius: 20px;
 	border: 1px solid #eaeaea;
 	overflow-y: scroll;
 	min-width: 20vw;
@@ -102,13 +101,13 @@ button {
 	.cartDetail {
 		.cartSingleItem {
 			display: flex;
-			align-items: baseline;
+			align-items: center;
 			border-bottom: 1px solid #eaeaea;
 			padding: 0.5em;
 
 			img {
 				max-width: 35px;
-				margin-right: 0.5em;
+				margin-right: 1.5em;
 			}
 
 			p {
@@ -149,9 +148,9 @@ button {
 		position: absolute;
 		top: 85vh;
 		color: #999;
+		font-size: 0.8em;
 	}
 	.checkout {
-		border-bottom-left-radius: 20px;
 		width: 55px;
 		height: 55px;
 		line-height: 55px;
@@ -206,10 +205,10 @@ button {
 
 	.newProduct {
 		mask: url('./images/newProduct.svg');
-		margin: 0 auto;
+		margin: 1.5em auto 0 auto;
 		display: inline-block;
-		width: 10vw;
-		height: 10vw;
+		width: 8vw;
+		height: 8vw;
 		background: deeppink;
 		mask-size: contain;
 		mask-repeat: no-repeat;
